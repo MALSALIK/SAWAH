@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("payment");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var a = document.getElementById("name").value;
+          var b = document.getElementById("email").value;
+          var c = document.getElementById("building").value;
+          var d = document.getElementById("city").value;
+          var e = document.getElementById("country").value;
+          var f = document.getElementById("zip").value;
+          var g = document.getElementById("cardname").value;
+          var h = document.getElementById("number").value;
+          var i = document.getElementById("expmo").value;
+          var j = document.getElementById("expyr").value;
+          var k = document.getElementById("cvv").value;
+          if (a == "a") window.location.href = "fail.html";
+          else window.location.href = "success.html";
+        });
+      });
+    </script>
+
+    <div class="container">
+      <form id="payment" onSubmit="window.location.href">
+        <div class="row">
+          <div class="col">
+            <h3 class="title">billing address</h3>
+
+            <div class="inputBox">
+              <span>full name :</span>
+              <input type="text" id="name" placeholder="Osama Alraddadi" />
+            </div>
+            <div class="inputBox">
+              <span>email :</span>
+              <input
+                type="email"
+                id="email"
+                placeholder="example@example.com"
+              />
+            </div>
+            <div class="inputBox">
+              <span>address :</span>
+              <input
+                type="text"
+                id="Building"
+                placeholder="Building number - Street"
+              />
+            </div>
+            <div class="inputBox">
+              <span>city :</span>
+              <input type="text" id="city" placeholder="Medina" />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>country :</span>
+                <input type="text" id="country" placeholder="Saudi Arabia" />
+              </div>
+              <div class="inputBox">
+                <span>zip code :</span>
+                <input type="text" id="zip" placeholder="123 456" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3 class="title">payment of: 350.00 SAR</h3>
+
+            <div class="inputBox">
+              <span>cards accepted :</span>
+              <img src="images/MADA.png" alt="" />
+            </div>
+            <div class="inputBox">
+              <span>name on card :</span>
+              <input
+                type="text"
+                id="cardname"
+                placeholder="Mr. Osama Alraddadi"
+              />
+            </div>
+            <div class="inputBox">
+              <span>credit card number :</span>
+              <input
+                type="number"
+                id="number"
+                placeholder="1111-2222-3333-4444"
+              />
+            </div>
+            <div class="inputBox">
+              <span>exp month :</span>
+              <input type="text" id="expmo" placeholder="january" />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>exp year :</span>
+                <input type="number" id="expyr" placeholder="2023" />
+              </div>
+              <div class="inputBox">
+                <span>CVV :</span>
+                <input type="text" id="cvv" placeholder="1234" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn" />
+      </form>
+    </div>
+  </body>
+</html>

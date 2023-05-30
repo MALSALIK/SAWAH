@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <form id="payment" onSubmit="window.location.href">
+      <div class="row">
+        <div class="col">
+          <div class="inputBox">
+            <span>Select Car :</span>
+            <select name="cars" id="cars">
+              <option value="" disabled selected>Select your car</option>
+              <option value="Toyota Camry">Toyota Camry</option>
+              <option value="Honda Civic">Honda Civic</option>
+              <option value="Nissan Altima">Nissan Altima</option>
+              <option value="Mazda3">Mazda3</option>
+              <option value="Hyundai Sonata">Hyundai Sonata</option>
+              <option value="Kia Optima">Kia Optima</option>
+              <option value="Toyota Yaris">Toyota Yaris</option>
+              <option value="Kia Rio">Kia Rio</option>
+            </select>
+          </div>
+          <div class="inputBox">
+            <span>Select Model :</span>
+            <select name="models" id="models">
+              <option value="" disabled selected>Select your car</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="inputBox">
+            <span>Pick Date :</span>
+            <input type="text" placeholder="Pickup date" id="pickupDate" name="pickupDate" onfocus="(this.type='date')"
+              onblur="(this.type='text')" />
+          </div>
+          <div class="inputBox">
+            <span>Pick Time :</span>
+            <input type="text" placeholder="Pickup time" id="pickupTime" name="pickupTime" onfocus="(this.type='time')"
+              onblur="(this.type='text')" />
+          </div>
+
+          <div class="flex">
+            <div class="inputBox">
+              <span>location :</span>
+              <select name="location" id="location">
+                <option value="" disabled selected>Select Location</option>
+                <option value="Location1">Alhijra Road</option>
+                <option value="Location2">Quba Road</option>
+              </select>
+            </div>
+            <div class="inputBox">
+              <span>Dropoff Date :</span>
+              <input type="text" id="dropoffDate" name="dropoffDate" placeholder="Dropoff date"
+                onfocus="(this.type='date')" onblur="(this.type='text')" />
+            </div>
+            <div class="inputBox">
+              <span>Dropoff Time :</span>
+              <input type="text" id="dropoffTime" name="dropoffTime" placeholder="Dropoff time"
+                onfocus="(this.type='time')" onblur="(this.type='text')" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="submit-btn" onclick="window.location.href='Payment.html'">Book</button>
+    </form>
+  </div>
+</body>
+
+</html>
